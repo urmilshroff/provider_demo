@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:provider_demo/models/list.dart';
 import 'package:provider_demo/pages/home_page.dart';
 
 void main() {
@@ -14,7 +16,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
+      home: ChangeNotifierProvider(
+        builder: (context) => ListModel(),
+        child: MyHomePage(),
+      ),
     );
   }
 }
