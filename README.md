@@ -1,2 +1,3 @@
-# provider_demo
-Flutter app to demo the usage of Providers
+# Provider Demo
+
+Flutter app to demo the usage of Providers for state management
