@@ -10,10 +10,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
+    return MultiProvider( // better to use MultiProvider
       providers: [
         ChangeNotifierProvider<ItemAddNotifier>(
-          create: (context) => ItemAddNotifier(),
+          create: (context) => ItemAddNotifier(), // returns ItemAddNotifier()
         ),
       ],
       child: MaterialApp(

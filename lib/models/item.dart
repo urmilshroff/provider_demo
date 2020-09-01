@@ -6,7 +6,9 @@ class Item {
 }
 
 class ItemAddNotifier extends ChangeNotifier {
+  // can be used with ChangeNotifierProvider & Consumer
   List<Item> itemList = [];
+
   void addItem(String name) {
     itemList.add(Item(name));
     notifyListeners();

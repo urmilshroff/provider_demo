@@ -11,10 +11,12 @@ class MyHomePage extends StatelessWidget {
         title: Text('Provider Demo'),
       ),
       body: Consumer<ItemAddNotifier>(
+        // listens for changes to the list and rebuilds widgets inside it
         builder: (context, itemAddNotifier, child) => ListView.builder(
           itemCount: itemAddNotifier.itemList.length,
-          itemBuilder: (context, index) =>
-              Center(child: Text(itemAddNotifier.itemList[index].itemName)),
+          itemBuilder: (context, index) => Center(
+            child: Text(itemAddNotifier.itemList[index].itemName),
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
